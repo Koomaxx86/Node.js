@@ -2,8 +2,9 @@ const util = require('util');
 
 // 1. promisify
 const fs = require('fs');
-// 콜백 기반 -> Promise 패턴으로 변경
-const readFile = util.promisify(fs.readFile);
+
+// 콜백 기반 ➡ Promise 패턴으로 변경
+const readFile = util.promisify(fs.readFile);   
 
 readFile('example.txt', 'utf8')
   .then((data) => console.log('File content:', data))
@@ -19,7 +20,7 @@ function Child() {
   this.name = 'Child';
 }
 
-// Base <- Childe
+// Base ⬅ Child  
 // - 부모 클래스 : Base
 // - 자식 클래스 : Child
 util.inherits(Child, Base);

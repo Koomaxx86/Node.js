@@ -1,5 +1,7 @@
 // XMLHttpRequest
-// X (에러) : 브라우저 객체이기 때문에, node 런타임 환경에서는 실행 불가
+// ❌ (에러) : 브라우저 객체이기 때문에, node 런타임 환경에서는 실행 불가
+
+
 // XMLHttpRequest 객체 생성
 var xhr = new XMLHttpRequest();
 

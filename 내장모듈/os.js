@@ -8,5 +8,7 @@ console.log('Hostname:', os.hostname());
 console.log('Release:', os.release());
 console.log('Home Directory:', os.homedir());
 console.log('CPUs:', os.cpus());
+console.log('CPU 코어개수:', os.cpus().length);
 console.log('Free Memory:', os.freemem());
 console.log('Total Memory:', os.totalmem());
+

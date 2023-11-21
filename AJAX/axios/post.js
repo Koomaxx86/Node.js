@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 const url = 'https://httpbin.org/post'
-const data = { name : 'joeun', age : 20 } 
+const data = { name : 'joeun', age : 20 }
 const headers = {
     'ContentType' : 'application/json'
 }

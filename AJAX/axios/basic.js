@@ -1,5 +1,6 @@
-// axios 모듈 설치
-// npm install axios
+// 👩‍💻 axios 모듈 설치
+// > npm install axios
+
 // axios 라이브러리 가져오기
 const axios = require('axios')
 
