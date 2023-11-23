@@ -4,16 +4,25 @@ const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
 const path = require('path')
+const nunjucks = require('nunjucks')
 
 
 // 라우터 import
 const indexRouter = require('./routes/index')
+const usersRouter = require('./routes/users')
+const boardRouter = require('./routes/board')
 
 
 // 미들웨어 설정
 const app = express()
 const port = 3000
 app.set('port', port)
+// 템플릿 설정
+app.set('view engine', 'html')
+nunjucks.configure('views', {
+    express: app,
+    watch: true,
+})
 
 // 정적 파일 경로 지정
 app.use('/', express.static(path.join(__dirname, 'public')))
@@ -31,6 +40,8 @@ app.use(session({
 
 // 라우터 설정
 app.use('/', indexRouter)
+app.use('/users', usersRouter)
+app.use('/board', boardRouter)
 
 
 // 위의 매핑되지 않은 나머지 요청
